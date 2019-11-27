@@ -27,8 +27,33 @@ import numpy as np
 
 vector1 = [10.5, 2.3, -3.3]
 vector2 = [-15.1, 4.7, 8.5]
-vector3 = tuple(vector1)
-vector4 = np.array(vector2)
+
+
+class TestVector:
+
+    def test_ducktyping(self):
+        v1 = Vector(vector1)
+        v2 = Vector(tuple(vector1))
+        v3 = Vector(np.array(vector1))
+        assert v1 == v2
+        assert v1 == v3
+
+    def test_dot_product_input(self):
+        v1 = Vector(vector1)
+        v2 = Vector(vector2)
+        result1 = v1.dot(v2)
+        result2 = v1.dot(vector2)
+        assert np.isclose(result1, result2)
+
+    def test_dot_product_result(self):
+        v1 = Vector(vector1)
+        v2 = Vector(vector2)
+        dot_result = v1.dot(v2)
+        assert np.isclose(dot_result, np.dot(vector1, vector2))
+
+    def test_cross_product(self):
+        v1 = Vector(vector1)
+        v2 = Vector(vector2)
 
 
 
