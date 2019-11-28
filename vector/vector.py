@@ -30,8 +30,6 @@ class Vector(object):
     vector1 = Vector(list) = Vector(tuple)
 
     """
-
-
     def __init__(self, vector):
         if len(vector) != 3:
             raise ValueError("not a 3D vector")
@@ -40,24 +38,34 @@ class Vector(object):
         self.direction = Vector([x/self.magnitude for x in vector])
 
     def distance(self, vector):
+        """
+        Returns the distance between two points
+        """
         dist = sum([ (x - y)**2 for x, y in zip(self.source, vector)])**2
 
         return dist
 
     def angle(self, vector):
+        """
+        return the angle between two vectors
+        """
         vector = Vector(vector)
         cos = self.dot(vector) / (self.magnitude * vector.magnitude)
 
         return math.acos(cos)
 
     def dot(self, vector):
+        """
+        returns the dot product of two vectors
+        """
         result =sum([ x*y for x, y in zip(self.source, vector)])
 
         return result
 
-
     def cross(self, vector):
-
+        """
+        returns the cross product of two vectors
+        """
         a1, a2, a3 = self.source
         b1, b2, b3 = vector
         result = [a2*b3 - a3*b2,
@@ -67,22 +75,38 @@ class Vector(object):
         return Vector(result)
 
     def __add__(self, other):
+        """
+        Define addition of vectors and forbid the addition with other objects
+        """
         if not isinstance(other, (self.__class__, list, tuple):
             raise ValueError(
                 'Can only operate on {0}.'.format(self.__class__.__name__))
 
     def __sub__(self, other):
+        """
+        Define subtraction of vectors and forbid it with other objects
+        """
+
         pass
 
     def __mul__(self, other):
+        """
+        Define what can be multiplied and what not
+        """
+
         pass
 
-    def __divmod__(self, other):
+    def __divmod__(self, other): # __truediv__???
+        """
+        Define what can be divided and what not
+        """
+
         pass
 
     def __radd__(self, other):
+
+
         if other == 0:
             return self
         else:
             return self.__add__(other)
-
