@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cbe4de41-67e9-4350-a3a1-f621e4ffea23" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector/tests/test_vector.py" beforeDir="false" afterPath="$PROJECT_DIR$/vector/tests/test_vector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector/vector.py" beforeDir="false" afterPath="$PROJECT_DIR$/vector/vector.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +32,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python tests.pytest for vector.tests.test_vector.TestVector.test_dot_product_input">
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Vector" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -50,6 +52,36 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for vector.tests.test_vector.TestVector" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Vector" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;vector.tests.test_vector.TestVector&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for vector.tests.test_vector.TestVector.test_dot_product_input" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Vector" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;vector.tests.test_vector.TestVector.test_dot_product_input&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest for vector.tests.test_vector.test_file1_method1" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -84,6 +116,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for vector.tests.test_vector.TestVector.test_dot_product_input" />
+        <item itemvalue="Python tests.pytest for vector.tests.test_vector.TestVector" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python tests.pytest for vector.tests.test_vector.test_file1_method1" />
         <item itemvalue="Python tests.pytest for vector.tests.test_vector.test_file1_method2" />
@@ -108,7 +142,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

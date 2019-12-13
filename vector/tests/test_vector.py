@@ -54,6 +54,7 @@ class TestVector:
     def test_cross_product(self):
         v1 = Vector(vector1)
         v2 = Vector(vector2)
+        assert isinstance(v1.cross(v2), Vector)
 
 
 

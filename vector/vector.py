@@ -35,13 +35,13 @@ class Vector(object):
             raise ValueError("not a 3D vector")
         self.source = vector
         self.magnitude = sum([x**2 for x in vector])**0.5
-        self.direction = Vector([x/self.magnitude for x in vector])
+       # self.direction = Vector([x/self.magnitude for x in vector])
 
     def distance(self, vector):
         """
         Returns the distance between two points
         """
-        dist = sum([ (x - y)**2 for x, y in zip(self.source, vector)])**2
+        dist = sum([(x - y)**2 for x, y in zip(self.source, vector)])**2
 
         return dist
 
@@ -58,7 +58,7 @@ class Vector(object):
         """
         returns the dot product of two vectors
         """
-        result =sum([ x*y for x, y in zip(self.source, vector)])
+        result = sum([x*y for x, y in zip(self.source, vector)])
 
         return result
 
@@ -78,7 +78,7 @@ class Vector(object):
         """
         Define addition of vectors and forbid the addition with other objects
         """
-        if not isinstance(other, (self.__class__, list, tuple):
+        if not isinstance(other, (self.__class__, list, tuple)):
             raise ValueError(
                 'Can only operate on {0}.'.format(self.__class__.__name__))
 
