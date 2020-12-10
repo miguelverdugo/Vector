@@ -24,24 +24,29 @@ import math
 import numbers
 
 
-class Vector(object):
+class Vector:
     """
     class to work with vectors without help of numpy
     vector1 = Vector(list) = Vector(tuple)
 
     """
     def __init__(self, vector):
-        if len(vector) != 3:
-            raise ValueError("not a 3D vector")
+
         self.source = vector
-        self.magnitude = sum([x**2 for x in vector])**0.5
-       # self.direction = Vector([x/self.magnitude for x in vector])
+        if isinstance(vector, Vector) is True:
+            self.source = vector.source
+
+    @property
+    def magnitude(self):
+        mag = sum([x**2 for x in self])**0.5
+        return mag
 
     def distance(self, vector):
         """
         Returns the distance between two points
         """
-        dist = sum([(x - y)**2 for x, y in zip(self.source, vector)])**2
+
+        dist = sum([(x - y)**2 for x, y in zip(self, vector)])**2
 
         return dist
 
@@ -58,7 +63,9 @@ class Vector(object):
         """
         returns the dot product of two vectors
         """
-        result = sum([x*y for x, y in zip(self.source, vector)])
+        if isinstance(vector, Vector) is False:
+            vector = Vector(vector)
+        result = sum([x*y for x, y in zip(self, vector)])
 
         return result
 
@@ -66,7 +73,8 @@ class Vector(object):
         """
         returns the cross product of two vectors
         """
-        a1, a2, a3 = self.source
+
+        a1, a2, a3 = self
         b1, b2, b3 = vector
         result = [a2*b3 - a3*b2,
                   a1*b3 - a3*b1,
@@ -74,6 +82,16 @@ class Vector(object):
 
         return Vector(result)
 
+    def __getitem__(self, item):
+        """
+        This does some magic
+        """
+        return self.source[item]
+
+    def __repr__(self):
+    
+        return "Vector(%s)" % self.source    
+    
     def __add__(self, other):
         """
         Define addition of vectors and forbid the addition with other objects
